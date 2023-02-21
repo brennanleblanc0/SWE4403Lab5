@@ -3,21 +3,16 @@ package ca.brennanleblanc.SWE4403Lab5.E01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team {
-  private List<Object> resources = new ArrayList<>();
+public class Team implements Employee {
+  private List<Employee> resources = new ArrayList<>();
 
-  public void add(Object resource) {
+  public void add(Employee resource) {
     resources.add(resource);
   }
 
   public void deploy() {
     for (var resource : resources) {
-      if (resource instanceof Truck)
-        ((Truck)resource).deploy();
-      else if (resource instanceof HumanResource)
-        ((HumanResource)resource).deploy();
-      else
-        ((Team)resource).deploy();
+      resource.deploy();
     }
   }
 }

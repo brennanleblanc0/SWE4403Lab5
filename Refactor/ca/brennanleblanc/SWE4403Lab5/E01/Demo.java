@@ -1,6 +1,9 @@
 package ca.brennanleblanc.SWE4403Lab5.E01;
 
 public class Demo {
+  public static void main(String[] args) {
+    show();
+  }
   public static void show() {
     var subTeam1 = new Team();
     subTeam1.add(new Truck());
